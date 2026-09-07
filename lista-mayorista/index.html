@@ -3313,7 +3313,7 @@ input {
           "sourceRow": 122,
           "category": "KITS P/ARMAR CORTINAS METÁLICAS",
           "brand": "-",
-          "description": "KIT INTERM. HASTA 4,50 X 5,00 M TABLILLAS CIEGAS 0,75 ESP DOBLE NERVIO EJE 160 MM. CON GUIÍAS DE SEGURIDAD",
+          "description": "KIT INTERM. HASTA 4,50 X 5,00 M TABLILLAS CIEGAS 0,75 ESP DOBLE NERVIO EJE 160 MM. CON GUÍAS DE SEGURIDAD",
           "code": "CONFKIT2",
           "details": [],
           "tax": 0.21,
@@ -3329,7 +3329,7 @@ input {
           "sourceRow": 123,
           "category": "KITS P/ARMAR CORTINAS METÁLICAS",
           "brand": "-",
-          "description": "KIT GRANDE HASTA 6,00 X 6,50 M TABLILLAS CIEGAS DOBLE NERVIO 0,95 ESP EJE 180 MM. CON GUIÍAS DE SEGURIDAD",
+          "description": "KIT GRANDE HASTA 6,00 X 6,50 M TABLILLAS CIEGAS DOBLE NERVIO 0,95 ESP EJE 180 MM. CON GUÍAS DE SEGURIDAD",
           "code": "CONFKIT3",
           "details": [],
           "tax": 0.21,
@@ -4704,7 +4704,7 @@ const formatMoney = (value) => {
 };
 
 const normalizeSku = (value) => String(value || "").trim().toUpperCase();
-const hostedPriceFilenameText = "Lista de Precio MAYORISTA - Base de Datos.xlsx";
+const hostedPriceFilenameText = "Lista de Precio MAYORISTA - Base de Datos.xls";
 
 const EMPTY_APPLICATION_SKUS = new Set(["PPAACCTOR", "SEGBUJTORK"]);
 const SINGLE_LINE_COLOR_SKUS = new Set(["TOPPVC15", "TOPPVC30", "TOPPVC3024V", "TOPPVC40"]);
@@ -4834,8 +4834,8 @@ const parsePriceRows = (rows) => {
 
   const headers = rows[headerIndex] || [];
   const skuColumn = findHeaderColumn(headers, ["Código", "Codigo"], 0);
-  const priceColumn = findHeaderColumn(headers, ["Precio de Venta($)", "Precio de Venta $", "Precio Neto", "Neto"], 11);
-  const finalColumn = findHeaderColumn(headers, ["Precio De Venta Con IVA($)", "Precio de Venta Con IVA $", "Precio Final", "Final"], 12);
+  const priceColumn = findHeaderColumn(headers, ["Precio de Venta($)", "Precio de Venta $", "Precio Neto", "Neto"], 10);
+  const finalColumn = findHeaderColumn(headers, ["Precio De Venta Con IVA($)", "Precio de Venta Con IVA $", "Precio Final", "Final"], 11);
 
   const prices = new Map();
   for (let index = headerIndex + 1; index < rows.length; index += 1) {
