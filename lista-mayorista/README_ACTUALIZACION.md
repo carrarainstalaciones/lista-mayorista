@@ -1,4 +1,4 @@
-# Lista mayorista Carrara - Septiembre 2026
+# Lista mayorista Carrara - Octubre 2026
 
 Archivos principales:
 
@@ -11,7 +11,7 @@ Flujo de actualización:
 1. Trabajar siempre sobre esta misma carpeta y mantener el HTML y el Excel juntos.
 2. Cada mes, reemplazar `Lista de Precio MAYORISTA - Base de Datos.xls` conservando nombre y estructura.
 3. Abrir o recargar el HTML desde hosting o servidor local. Lee el Excel automáticamente, sin usar la caché.
-4. El cruce es por SKU: columna A (`Código`), columna K (`Precio de Venta($)`, neto) y columna L (`Precio De Venta Con IVA($)`, final con IVA).
+4. El cruce es por SKU usando los encabezados `Código`, `Codigo` o `Cod Producto`. Los importes en pesos se leen de `Precio de Venta($)` / `Precio de Venta $` (neto) y `Precio De Venta Con IVA($)` / `Precio De Venta Con Iva $` (final con IVA). Se identifican por nombre, no por posición; en la base actual están en L y N.
 5. Revisar el estado de lectura de precios antes de imprimir o exportar a PDF.
 
 Se eliminó el botón de actualización manual y el CSV. No se buscan archivos alternativos XLSX o CSV.
